@@ -8,7 +8,8 @@ Pre-requisite
   * npm install -g grunt-cli
   * npm install
 
-3.  launch the server: grunt
+3. step 3
+  * launch the server: grunt
   * goto localhost:3000
 
 
