@@ -12,4 +12,4 @@ app.post('/todos', function(req, res) {
 	todos.push(req.body);
 	res.send(todos);
 });
-app.listen(3000);
+app.listen(8000);
