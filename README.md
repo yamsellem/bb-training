@@ -1,7 +1,7 @@
 Pre-requisite
 -------------
 
-1.  install (nodejs)[http://nodejs.org/]
+1.  install [nodejs](http://nodejs.org/)
 
 2.  install the server dependencies: 
     cd bb-training
