@@ -1,19 +1,15 @@
 Pre-requisite
 -------------
 
-1.  install [nodejs](http://nodejs.org/)
+1. install [nodejs](http://nodejs.org/)
 
-2.  install the server dependencies: 
-
+2. install the server dependencies: 
    cd bb-training
-
    npm install -g grunt-cli
-
    npm install
 
-3.  launch the server: grunt
-
-    goto localhost:3000
+3. launch the server: grunt
+   goto localhost:3000
 
 
 Handson: from todo to done (2h30)
