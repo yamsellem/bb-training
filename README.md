@@ -5,11 +5,11 @@ Pre-requisite
 
 2.  install the server dependencies: 
 
-⋅⋅⋅ cd bb-training
+...cd bb-training
 
-⋅⋅⋅ npm install -g grunt-cli
+...npm install -g grunt-cli
 
-⋅⋅⋅ npm install
+...npm install
 
 3.  launch the server: grunt
 
