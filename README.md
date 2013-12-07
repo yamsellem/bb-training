@@ -15,14 +15,13 @@ Pre-requisite
 Handson: from todo to done (2h30)
 ---------------------------------
 
-1.  create a view arround the #todoapp el
+1.* create a view arround the #todoapp el
   * this view should listen to the enter key press
   * create a todos collection and a the newly created item
   * add a li in the #todo-list representing this model
-
   * tips: $('#stats-template').html() get the template content _.template compiles it
 
-2.  create a view for each todo model to handle individual events
+  * create a view for each todo model to handle individual events
   * move the li templating to this view
   * append this view el to its parent destination
   * tips: the attribute tagName defines the root node of the view
