@@ -11,7 +11,7 @@ module.exports = function(grunt) {
       },
     },
     jshint: {
-      all: ['Gruntfile.js', 'test/**/*.js'],
+      all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'],
       options: {
         curly: true,
         eqeqeq: true,
@@ -33,7 +33,10 @@ module.exports = function(grunt) {
       }
     },
     mocha: {
-      all: ['tests/index.html']
+      all: ['tests/index.html'],
+      options: {
+        log: true
+      }
     }
   });
 

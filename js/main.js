@@ -1,14 +1,48 @@
-$(function () {
-    'use strict';
+/*global require*/
+'use strict';
 
-    var _sync = Backbone.sync;
-    Backbone.sync = function(method, model, options) {
-        options.beforeSend = function(xhr) {
-            return xhr.setRequestHeader('X-User', 'yourname');
-        };
-        return _sync.call(this, method, model, options);
-    };
+// Require.js allows us to configure shortcut alias
+require.config({
+	// The shim config allows us to configure dependencies for
+	// scripts that do not call define() to register a module
+	shim: {
+		underscore: {
+			exports: '_'
+		},
+		backbone: {
+			deps: [
+				'underscore',
+				'jquery'
+			],
+			exports: 'Backbone'
+		}
+	},
+	paths: {
+		jquery: '../vendor/jquery-2.0.3',
+		underscore: '../vendor/underscore-1.5.2',
+		backbone: '../vendor/backbone-1.1.0',
+		text: '../vendor/text-2.0.10'
+	}
+});
 
-    new Router();
-    Backbone.history.start();
+require([
+	'backbone',
+	'views/app',
+	'routers/router'
+], function (Backbone, AppView, Workspace) {
+	var _sync = Backbone.sync;
+	Backbone.sync = function(method, model, options) {
+	  options.beforeSend = function(xhr) {
+	    return xhr.setRequestHeader('X-User', 'paul');
+	  };
+	  return _sync.call(this, method, model, options);
+	};
+
+	/*jshint nonew:false*/
+	// Initialize routing and start Backbone.history()
+	new Workspace();
+	Backbone.history.start();
+
+	// Initialize the application view
+	new AppView();
 });
