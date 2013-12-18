@@ -32,7 +32,7 @@ require([
 	var _sync = Backbone.sync;
 	Backbone.sync = function(method, model, options) {
 	  options.beforeSend = function(xhr) {
-	    return xhr.setRequestHeader('X-User', 'your id');
+	    return xhr.setRequestHeader('X-User', 18000);
 	  };
 	  return _sync.call(this, method, model, options);
 	};

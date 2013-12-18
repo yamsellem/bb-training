@@ -1,14 +1,15 @@
-define(['js/models/todo'], function(Todo) {
-	describe('Todo', function(){	
+define(['models/todo'], function(Todo) {
+
+    describe('Todo model', function(){
 
 		var todo;
 		before(function() {
 			todo = new Todo();
 		})
 
-		it('defaults are ok', function(){
+		it('should have defaults values', function(){
 			expect(todo.get('title')).to.equal('');
 			expect(todo.get('completed')).to.be.false;
-		})
+		});
 	})
 })
