@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         options: {
             interrupt: true
         }
-      },
+      }
     },
     jshint: {
       all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'],
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         browser: true,
         globals: {
           jQuery: true
-        },
+        }
       }
     },
     requirejs: {

@@ -27,13 +27,12 @@ require.config({
 
 require([
 	'backbone',
-	'views/app',
 	'routers/router'
-], function (Backbone, AppView, Workspace) {
+], function (Backbone, Workspace) {
 	var _sync = Backbone.sync;
 	Backbone.sync = function(method, model, options) {
 	  options.beforeSend = function(xhr) {
-	    return xhr.setRequestHeader('X-User', 'paul');
+	    return xhr.setRequestHeader('X-User', 'your id');
 	  };
 	  return _sync.call(this, method, model, options);
 	};
@@ -42,7 +41,4 @@ require([
 	// Initialize routing and start Backbone.history()
 	new Workspace();
 	Backbone.history.start();
-
-	// Initialize the application view
-	new AppView();
 });

@@ -11,7 +11,7 @@ define([
 		model: Todo,
 
 		// Save all of the todo items under the `"todos"` namespace.
-		url: '/todos',
+		url: 'http://taskmanager.kewego.com/tasks',
 
 		// Filter down the list of all todo items that are finished.
 		completed: function () {
